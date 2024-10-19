@@ -7,16 +7,17 @@
   <title>Outubro Rosa</title>
   <link rel="stylesheet" href="/assets/styles/index.css">
   <link rel="shortcut icon" href="/assets/img/cancer-de-mama.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <section class="header__container">
-      <figure>
+      <figure data-aos="fade-right" data-aos-duration="2000">
         <img src="./assets/img/cancer-de-mama.png" alt="Mulher com o simbolo do outubro rosa no peito">
         <figcaption>Outubro rosa</figcaption>
       </figure>
-      <nav>
+      <nav data-aos="fade-left" data-aos-duration="3000">
         <ul>
           <li>Sobre</li>
           <li>Conscientização</li>
@@ -27,45 +28,45 @@
   </header>
   <main>
     <section class="sobre__container">
-      <div class="sobre__conteudo">
+      <div class="sobre__conteudo" data-aos="fade-up" data-aos-duration="2000">
         <p>Outubro Rosa alerta sobre prevenção e diagnóstico precoce do câncer de mama. O mês de Outubro já é conhecido
           mundialmente como um mês marcado por ações afirmativas relacionadas à prevenção e diagnóstico precoce do
           câncer de mama. O movimento, conhecido como Outubro Rosa, é celebrado anualmente desde os anos 90.</p>
       </div>
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="2000">
         <img src="/assets/img/sobre-outubro-rosa.png" alt="Várias mãos juntas com o simbolo do outubro rosa"
           class="sobre__imagem">
       </figure>
     </section>
     <section class="conscientizacao__container">
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="2000">
         <img src="/assets/img/conscientização.png" alt="Várias pessoas em uma manifestação do outubro rosa"
           class="conscientizacao__imagem">
       </figure>
-      <div class="conscientizacao__conteudo">
+      <div class="conscientizacao__conteudo" data-aos="fade-up" data-aos-duration="2000">
         <p>Outubro Rosa promove a conscientização sobre o câncer de mama com corridas e caminhadas. Esses eventos
           incentivam a prevenção e o diagnóstico precoce, reunindo pessoas em apoio à causa. Participantes vestem rosa e
           percorrem distâncias variadas.</p>
       </div>
     </section>
     <section class="dicas__container">
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="2000">
         <img src="/assets/img/imagemMamografia.png" alt="Exame de mamografia com paciente e técnico">
       </figure>
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="2500">
         <img src="/assets/img/imagemAlimentaçãoSaudável.png" alt="Mulher felliz com uma cesta de verduras">
       </figure>
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="3000">
         <img src="/assets/img/imagemConsultaMedica.png" alt="Consulta médica entre doutor e paciente">
       </figure>
-      <figure>
+      <figure data-aos="fade-up" data-aos-duration="3000">
         <img src="/assets/img/imagemProibidoBebereFumar.png" alt="Ícone de proibição de fumar e beber">
       </figure>
     </section>
   </main>
   <footer>
     <section class="footer__container">
-      <nav class="footer__navigation">
+      <nav class="footer__navigation" data-aos="fade-up" data-aos-duration="2000">
         <a href="https://linkedin.com" target="_blank" rel="noreferrer">
           <img src="/assets/img/linkedin-icon.png" alt="Linkedin icon">
         </a>
@@ -76,17 +77,21 @@
           <img src="/assets/img/github-icon.png" alt="Github icon">
         </a>
       </nav>
-      <ul class="footer__data">
+      <ul class="footer__data" data-aos="fade-up" data-aos-duration="2500">
         <li>Gustavo Almeida</li>
         <li>Vinicius Bispo</li>
         <li>Marina Gomes</li>
         <li>Layout criado para fins de estudos na escola vai na web</li>
       </ul>
-      <figure class="footer__figure">
+      <figure class="footer__figure" data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="top-bottom">
         <img src="/assets/img/laco-rosa.png" alt="Laço rosa do outubro rosa">
       </figure>
     </section>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
