@@ -11,7 +11,7 @@
 + Html5 <img width="15px" src="https://cdn-icons-png.flaticon.com/512/4943/4943029.png" />
 + Css3 <img width="15px" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" />
 + SASS 🎨
-AOS (Animate On Scroll) 📈
++ AOS (Animate On Scroll) 📈
 
 ### How to use
  
