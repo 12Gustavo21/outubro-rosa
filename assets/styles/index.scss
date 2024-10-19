@@ -1,0 +1,170 @@
+@import "./_variables";
+@import "./_mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $backgroun-primary;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  background-color: $backgroun-secondary;
+  width: 100%;
+  height: 15vh;
+  @include flex(row, center, center);
+
+  .header__container {
+    width: 100%;
+    @include flex(row, space-between, center);
+    padding: 0 2rem;
+
+    figure {
+      @include flex(row, center, center);
+      height: 100%;
+
+      img {
+        width: 6.25rem;
+        height: 6.25rem;
+      }
+
+      figcaption {
+        padding: 0.5rem 0 0 0.5rem;
+        font-size: 1.5rem;
+        color: $font-primary;
+        text-transform: uppercase;
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        width: 100%;
+        @include flex(row, center, center);
+        gap: 3rem;
+        font-size: 1.5rem;
+        color: $font-primary;
+        text-transform: uppercase;
+
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .sobre__container {
+    width: 100%;
+    height: 50vh;
+    @include flex(row, space-evenly, center);
+
+    .sobre__conteudo {
+      width: 50%;
+      padding: 2rem 0;
+      font-size: 1.6rem;
+      line-height: 2.1281rem;
+      text-align: left;
+    }
+
+    .sobre__imagem {
+      width: 22.8125rem;
+      height: 22.1875rem;
+    }
+  }
+
+  .conscientizacao__container {
+    height: 40vh;
+    background-color: $backgroun-secondary;
+    @include flex(row, space-evenly, center);
+
+    .conscientizacao__conteudo {
+      width: 50%;
+      padding: 2rem 0;
+      font-size: 1.6rem;
+      line-height: 2.1281rem;
+      text-align: left;
+      color: $font-primary;
+    }
+
+    .conscientizacao__imagem {
+      width: 28rem;
+      height: 17rem;
+      object-fit: cover;
+    }
+  }
+
+  .dicas__container {
+    height: 50vh;
+    @include flex(row, space-evenly, center);
+
+    figure {
+      width: 15.625rem;
+      height: 15.625rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s all ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $backgroun-secondary;
+  height: 30vh;
+
+  .footer__container {
+    @include flex(row, space-between, center);
+    padding: 0 2rem;
+    height: 100%;
+
+    .footer__navigation {
+      width: 20%;
+      @include flex(row, space-around, center);
+      
+      a {
+        img {
+          width: 4.1875rem;
+          height: 4.1875rem;
+          transition: 0.5s all ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .footer__data {
+      height: 60%;
+      @include flex(column, space-around, center);
+      color: $font-primary;
+      font-size: 1.25rem;
+    }
+
+    .footer__figure {
+      width:  6.6rem;
+      height:  7rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
