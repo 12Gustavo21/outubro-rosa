@@ -16,7 +16,7 @@ body {
 header {
   background-color: #FF69B4;
   width: 100%;
-  height: 15vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -59,17 +59,30 @@ header .header__container nav ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
   color: #E4EEF1;
   text-transform: uppercase;
 }
 header .header__container nav ul li {
   cursor: pointer;
 }
+@media only screen and (width <= 900px) {
+  header .header__container {
+    flex-direction: column;
+  }
+  header .header__container nav {
+    padding: 1rem 0;
+  }
+}
+@media only screen and (width <= 425px) {
+  header .header__container nav ul {
+    gap: 0.7rem;
+  }
+}
 
 main .sobre__container {
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -83,12 +96,30 @@ main .sobre__container .sobre__conteudo {
   line-height: 2.1281rem;
   text-align: left;
 }
-main .sobre__container .sobre__imagem {
-  width: 22.8125rem;
-  height: 22.1875rem;
+main .sobre__container figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .sobre__container figure .sobre__imagem {
+  width: 100%;
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (width <= 1050px) {
+  main .sobre__container {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  main .sobre__container .sobre__conteudo {
+    width: 90%;
+  }
 }
 main .conscientizacao__container {
-  height: 40vh;
+  min-height: 40vh;
   background-color: #FF69B4;
   display: flex;
   flex-direction: row;
@@ -104,14 +135,30 @@ main .conscientizacao__container .conscientizacao__conteudo {
   text-align: left;
   color: #E4EEF1;
 }
-main .conscientizacao__container .conscientizacao__imagem {
-  width: 28rem;
+main .conscientizacao__container figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .conscientizacao__container figure .conscientizacao__imagem {
+  width: 90%;
   height: 17rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media only screen and (width <= 1050px) {
+  main .conscientizacao__container {
+    flex-direction: column-reverse;
+    padding-bottom: 1rem;
+  }
+  main .conscientizacao__container .conscientizacao__conteudo {
+    width: 90%;
+  }
+}
 main .dicas__container {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -129,6 +176,11 @@ main .dicas__container figure img {
 }
 main .dicas__container figure img:hover {
   transform: scale(1.1);
+}
+@media only screen and (width <= 950px) {
+  main .dicas__container {
+    padding: 1rem 0;
+  }
 }
 
 footer {
@@ -161,20 +213,44 @@ footer .footer__container .footer__navigation a img:hover {
   transform: scale(1.1);
 }
 footer .footer__container .footer__data {
-  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  height: 60%;
   color: #E4EEF1;
   font-size: 1.25rem;
+  list-style: none;
+  text-align: center;
 }
 footer .footer__container .footer__figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer__container .footer__figure img {
   width: 6.6rem;
   height: 7rem;
 }
-footer .footer__container .footer__figure img {
-  width: 100%;
-  height: 100%;
+@media only screen and (width <= 825px) {
+  footer .footer__container .footer__navigation {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  footer .footer__container .footer__data {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  footer .footer__container .footer__figure {
+    width: 100%;
+  }
+}
+@media only screen and (width <= 825px) {
+  footer {
+    min-height: 30vh;
+    height: auto;
+  }
 }/*# sourceMappingURL=index.css.map */

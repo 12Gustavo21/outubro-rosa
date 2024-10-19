@@ -19,7 +19,7 @@ body {
 header {
   background-color: $backgroun-secondary;
   width: 100%;
-  height: 15vh;
+  min-height: 15vh;
   @include flex(row, center, center);
 
   .header__container {
@@ -50,12 +50,28 @@ header {
         width: 100%;
         @include flex(row, center, center);
         gap: 3rem;
-        font-size: 1.5rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.5rem);
         color: $font-primary;
         text-transform: uppercase;
 
         li {
           cursor: pointer;
+        }
+      }
+    }
+
+    @media only screen and (width <= 900px) {
+      flex-direction: column;
+
+      nav {
+        padding: 1rem 0;
+      }
+    }
+
+    @media only screen and (width <= 425px) {
+      nav {
+        ul {
+          gap: .7rem;
         }
       }
     }
@@ -65,7 +81,7 @@ header {
 main {
   .sobre__container {
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     @include flex(row, space-evenly, center);
 
     .sobre__conteudo {
@@ -76,14 +92,28 @@ main {
       text-align: left;
     }
 
-    .sobre__imagem {
-      width: 22.8125rem;
-      height: 22.1875rem;
+    figure {
+      @include flex(row, center, center);
+
+      .sobre__imagem {
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+      }
+    }
+
+    @media only screen and (width <= 1050px) {
+      flex-direction: column;
+      padding-bottom: 1rem;
+
+      .sobre__conteudo {
+        width: 90%;
+      }
     }
   }
 
   .conscientizacao__container {
-    height: 40vh;
+    min-height: 40vh;
     background-color: $backgroun-secondary;
     @include flex(row, space-evenly, center);
 
@@ -96,15 +126,27 @@ main {
       color: $font-primary;
     }
 
-    .conscientizacao__imagem {
-      width: 28rem;
-      height: 17rem;
-      object-fit: cover;
+    figure {
+      @include flex(row, center, center);
+      .conscientizacao__imagem {
+        width: 90%;
+        height: 17rem;
+        object-fit: cover;
+      }
+    }
+
+    @media only screen and (width <= 1050px) {
+      flex-direction: column-reverse;
+      padding-bottom: 1rem;
+
+      .conscientizacao__conteudo {
+        width: 90%;
+      }
     }
   }
 
   .dicas__container {
-    height: 50vh;
+    min-height: 50vh;
     @include flex(row, space-evenly, center);
 
     figure {
@@ -121,6 +163,10 @@ main {
         }
       }
     }
+
+    @media only screen and (width <= 950px) {
+      padding: 1rem 0;
+    }
   }
 }
 
@@ -136,7 +182,7 @@ footer {
     .footer__navigation {
       width: 20%;
       @include flex(row, space-around, center);
-      
+
       a {
         img {
           width: 4.1875rem;
@@ -151,20 +197,42 @@ footer {
     }
 
     .footer__data {
-      height: 60%;
       @include flex(column, space-around, center);
+      height: 60%;
       color: $font-primary;
       font-size: 1.25rem;
+      list-style: none;
+      text-align: center;
     }
 
     .footer__figure {
-      width:  6.6rem;
-      height:  7rem;
+      @include flex(row, center, center);
 
       img {
-        width: 100%;
-        height: 100%;
+        width: 6.6rem;
+        height: 7rem;
       }
     }
+
+    @media only screen and (width <= 825px) {
+      .footer__navigation {
+        width: 100%;
+        padding-top: 1rem;
+      }
+
+      .footer__data {
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      .footer__figure {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (width <= 825px) {
+    min-height: 30vh;
+    height: auto;
   }
 }
