@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  background-color: $backgroun-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $backgroun-primary;
+  border: .2rem solid $backgroun-secondary;
+  border-radius: 1rem;
+}
+
 html {
   scroll-behavior: smooth;
 }

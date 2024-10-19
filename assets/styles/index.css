@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  background-color: #FF69B4;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFD9EC;
+  border: 0.2rem solid #FF69B4;
+  border-radius: 1rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
